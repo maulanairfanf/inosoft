@@ -1,5 +1,5 @@
-<template lang="">
-  <div class="grid grid-cols-16 gap-2 p-2 w-full border border-t-0">
+<template>
+  <div class="grid grid-cols-15 gap-2 p-2 w-full border border-t-0">
     <div class="col-span-2">
       <InputText type="text" placeholder="Description" width="w-full" />
     </div>
@@ -7,7 +7,7 @@
       <InputText type="text" placeholder="QTY" width="w-full" />
     </div>
     <div>
-      <InputSelect width="w-full" />
+      <InputSelect :listOption="listUOM" width="w-full" />
     </div>
     <div class="col-span-2">
       <InputText type="text" placeholder="Unit Price" width="w-full" />
@@ -29,7 +29,7 @@
       </svg>
     </div>
     <div>
-      <InputSelect width="w-full" />
+      <InputSelect :listOption="listCurrency" width="w-full" />
     </div>
     <div class="flex items-center justify-end mr-6">
       <span>0.00</span>
@@ -40,32 +40,34 @@
     <div class="flex items-center mr-6">
       <span>0.00</span>
     </div>
-    <div class="col-span-2">
-      <InputSelect width="w-full" />
-    </div>
-    <div>
-      <button class="bg-gray-200 border rounded block p-4">
-        <svg
-          width="12"
-          height="5"
-          viewBox="0 0 22 5"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M20.3125 0H1.5625C0.699707 0 0 0.699707 0 1.5625V3.125C0 3.98779 0.699707 4.6875 1.5625 4.6875H20.3125C21.1753 4.6875 21.875 3.98779 21.875 3.125V1.5625C21.875 0.699707 21.1753 0 20.3125 0Z"
-            fill="#64748b"
-          />
-        </svg>
-      </button>
+    <div class="col-span-2 flex justify-between">
+      <InputSelect :listOption="listCharge" width="w-full mr-2" />
+      <ButtonMin />
     </div>
   </div>
 </template>
 <script>
+  import store from '@/store';
+  import ButtonMin from '@/components/Button/ButtonMin.vue';
   import InputSelect from '../InputSelect.vue';
   import InputText from '../InputText.vue';
   export default {
     name: 'BodyGridCost',
-    components: { InputText, InputSelect },
+    props: {
+      listCurrency: [],
+    },
+    components: { InputText, InputSelect, ButtonMin },
+    computed: {
+      listUOM() {
+        return store.state.uom;
+      },
+      listCharge() {
+        return store.state.charge;
+      },
+    },
+    mounted() {
+      store.dispatch('fetchUOM');
+      store.dispatch('fetchCharge');
+    },
   };
 </script>

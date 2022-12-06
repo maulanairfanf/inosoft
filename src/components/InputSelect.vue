@@ -4,10 +4,9 @@
     :class="width"
   >
     <option>Select an Option</option>
-    <option selected value="US">SHP</option>
-    <option value="CA">Canada</option>
-    <option value="FR">France</option>
-    <option value="DE">Germany</option>
+    <option :selected="item.selected" v-for="item in listOption">
+      {{ item.name }}
+    </option>
   </select>
 </template>
 
