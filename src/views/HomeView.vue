@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4">
+  <form @submit.prevent="onSubmit" class="p-4">
     <InformationDetail class="mb-4" />
     <CostDetail />
     <div class="flex justify-end mt-4 bg-gray-50 py-6">
@@ -7,7 +7,7 @@
       <ButtonSave />
       <ButtonSubmit />
     </div>
-  </div>
+  </form>
 </template>
 
 <script>
