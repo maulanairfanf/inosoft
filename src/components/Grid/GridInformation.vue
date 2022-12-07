@@ -94,12 +94,12 @@
         ],
         listInvoice: [
           {
-            name: 'Amarit & Associates Logistics Co Ltd',
+            name: 'MITO',
             id: '1',
             selected: true,
           },
           {
-            name: 'Inosoft',
+            name: 'OTIM',
             id: '2',
             selected: false,
           },

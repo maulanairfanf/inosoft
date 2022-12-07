@@ -4,13 +4,13 @@
       <InputText type="text" placeholder="Description" width="w-full" />
     </div>
     <div class="w-full">
-      <InputText type="text" placeholder="QTY" width="w-full" />
+      <InputText type="number" placeholder="QTY" width="w-full" />
     </div>
     <div>
       <InputSelect :listOption="listUOM" width="w-full" />
     </div>
     <div class="col-span-2">
-      <InputText type="text" placeholder="Unit Price" width="w-full" />
+      <InputText type="number" placeholder="Unit Price" width="w-full" />
     </div>
     <div><InputText type="number" value="0" width="w-full" /></div>
     <div><InputText type="number" value="0" width="w-full" /></div>
@@ -42,7 +42,7 @@
     </div>
     <div class="col-span-2 flex justify-between">
       <InputSelect :listOption="listCharge" width="w-full mr-2" />
-      <ButtonMin />
+      <ButtonMin @handle-minus="handleMinus" :id="id" />
     </div>
   </div>
 </template>
@@ -55,6 +55,7 @@
     name: 'BodyGridCost',
     props: {
       listCurrency: [],
+      id: Number,
     },
     components: { InputText, InputSelect, ButtonMin },
     computed: {
@@ -68,6 +69,11 @@
     mounted() {
       store.dispatch('fetchUOM');
       store.dispatch('fetchCharge');
+    },
+    methods: {
+      handleMinus(params) {
+        console.log('id : ', params);
+      },
     },
   };
 </script>

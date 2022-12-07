@@ -5,6 +5,7 @@
     :class="width"
     :value="value"
     class="bg-gray-50 border text-sm text-gray-700 rounded block p-2.5"
+    required
   />
 </template>
 

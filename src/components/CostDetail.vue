@@ -17,7 +17,8 @@
     </div>
     <HeadGridCost />
     <BodyGridCost
-      v-for="item in listCurrency"
+      v-for="(item, index) in listCurrency"
+      :id="index"
       :listCurrency="item"
       :key="item.id"
     />
@@ -43,6 +44,7 @@
         return store.state.currency;
       },
     },
+
     mounted() {
       store.dispatch('fetchCurrency');
     },

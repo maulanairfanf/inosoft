@@ -1,5 +1,9 @@
 <template>
-  <button class="bg-gray-200 hover:bg-white border rounded block p-4">
+  <button
+    @click="handleMinusChild"
+    type="button"
+    class="bg-gray-200 hover:bg-white border rounded block p-4"
+  >
     <svg
       width="12"
       height="5"
@@ -17,5 +21,13 @@
 <script>
   export default {
     name: 'ButtonMin',
+    props: {
+      id: Number,
+    },
+    methods: {
+      handleMinusChild() {
+        this.$emit('handle-minus', this.id);
+      },
+    },
   };
 </script>

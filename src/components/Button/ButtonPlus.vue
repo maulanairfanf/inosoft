@@ -1,5 +1,6 @@
 <template>
-  <button
+  <button    type="button"
+
     class="bg-teal-400 text-white border rounded block p-4 ml-2 hover:bg-white hover:text-teal-400"
   >
     <svg

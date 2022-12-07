@@ -1,9 +1,10 @@
 <template>
   <select
-    class="bg-gray-50 border text-sm text-gray-400 rounded block p-2.5"
+    class="bg-gray-50 border text-sm text-gray-700 rounded block p-2.5"
     :class="width"
+    required
   >
-    <option>Select an Option</option>
+    <option value="">Select an Option</option>
     <option :selected="item.selected" v-for="item in listOption">
       {{ item.name }}
     </option>
