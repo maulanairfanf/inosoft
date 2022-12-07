@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-16 gap-2 text-left bg-gray-50 p-2 w-full border">
+  <div class="grid grid-cols-15 gap-2 text-left bg-gray-50 p-2 w-full border">
     <div class="col-span-2">Description</div>
     <div>Qty</div>
     <div>UOM</div>
@@ -12,7 +12,6 @@
     <div>Sub Total</div>
     <div>Total</div>
     <div class="col-span-2">Charge To</div>
-    <div></div>
   </div>
 </template>
 <script>

@@ -49,8 +49,8 @@
 <script>
   import store from '@/store';
   import ButtonMin from '@/components/Button/ButtonMin.vue';
-  import InputSelect from '../InputSelect.vue';
-  import InputText from '../InputText.vue';
+  import InputSelect from '@/components/Input/InputSelect.vue';
+  import InputText from '@/components/Input/InputText.vue';
   export default {
     name: 'BodyGridCost',
     props: {
