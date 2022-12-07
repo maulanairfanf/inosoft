@@ -27,9 +27,9 @@
 
 <script>
   import store from '@/store';
-  import HeadGridCost from './Table/HeadGridCost.vue';
-  import BodyGridCost from './Table/BodyGridCost.vue';
-  import FooterGridCost from './Table/FooterGridCost.vue';
+  import HeadGridCost from '@/components/Grid/HeadGridCost.vue';
+  import BodyGridCost from '@/components/Grid/BodyGridCost.vue';
+  import FooterGridCost from '@/components/Grid/FooterGridCost.vue';
 
   export default {
     name: 'CostDetail',
