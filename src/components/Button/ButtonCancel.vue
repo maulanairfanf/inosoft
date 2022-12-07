@@ -1,7 +1,7 @@
 <template>
   <button
     type="button"
-    class="mx-4 py-4 px-10 rounded border-2 border-gray-50 hover:border-gray-500"
+    class="mx-4 py-4 px-10 rounded border-2 border-gray-50 hover:border-gray-500 font-extralight text-sm"
   >
     Cancel
   </button>

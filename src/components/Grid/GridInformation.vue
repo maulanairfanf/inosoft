@@ -19,9 +19,7 @@
     </div>
     <div class="grid grid-cols-12 col-span-10">
       <div class="col-span-12 flex justify-start py-1 border-b">
-        <button class="bg-gray-300 rounded-full px-16 py-1 text-sm">
-          Draft
-        </button>
+        <ButtonDraft />
       </div>
       <div class="grid grid-cols-6 col-span-12 gap-2 mt-4">
         <div class="col-span-2 flex flex-col items-start">
@@ -65,6 +63,7 @@
 <script>
   import InputSelect from '@/components/Input/InputSelect.vue';
   import InputText from '@/components/Input/InputText.vue';
+  import ButtonDraft from '../Button/ButtonDraft.vue';
   export default {
     data() {
       return {
@@ -131,6 +130,6 @@
       };
     },
     name: 'GridInformation',
-    components: { InputSelect, InputText },
+    components: { InputSelect, InputText, ButtonDraft },
   };
 </script>
