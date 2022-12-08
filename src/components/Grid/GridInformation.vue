@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-12 gap-2 p-2">
+  <div class="grid grid-cols-12 gap-2 p-2 w-full">
     <div class="col-span-2 flex items-start">
       <div class="bg-gray-50 text-teal-400 text-sm block p-2.5">
         <svg
@@ -19,41 +19,41 @@
     </div>
     <div class="grid grid-cols-12 col-span-10">
       <div class="col-span-12 flex justify-start py-1 border-b">
-        <ButtonDraft />
+        <ButtonDraft type="button" msg="Draft" />
       </div>
       <div class="grid grid-cols-6 col-span-12 gap-2 mt-4">
         <div class="col-span-2 flex flex-col items-start">
-          <h4>Assigned Vendor</h4>
+          <h4 class="whitespace-nowrap">Assigned Vendor</h4>
           <InputSelect :listOption="listVendor" class="w-full" />
         </div>
         <div class="col-span-1 flex flex-col items-start">
-          <h4>Invoice To</h4>
+          <h4 class="whitespace-nowrap">Invoice To</h4>
           <InputText class="w-full" value="John Smith" />
         </div>
         <div class="col-span-1 flex flex-col items-start">
-          <h4>Invoice To</h4>
+          <h4 class="whitespace-nowrap">Invoice To</h4>
           <InputText class="w-full" value="ABC-123-01" />
         </div>
         <div class="col-span-1 flex flex-col items-start pr-4">
-          <h4>Invoice To</h4>
+          <h4 class="whitespace-nowrap">Invoice To</h4>
           <InputSelect :listOption="listInvoice" class="w-full" />
         </div>
         <div
           class="col-span-1 flex flex-col items-start pl-4 border-l-2 border-dashed"
         >
-          <h4>Costumer - Contract</h4>
+          <h4 class="whitespace-nowrap">Costumer - Contract</h4>
           <InputSelect :listOption="listCostumerContract" class="w-full" />
         </div>
       </div>
       <div class="grid grid-cols-6 col-span-12 gap-2 mt-1">
-        <div class="col-span-5 flex flex-col items-start pr-4">
-          <h4>Vendor Address</h4>
+        <div class="col-span-5 flex flex-col items-start pr-4 relative">
+          <h4 class="whitespace-nowrap">Vendor Address</h4>
           <InputText class="w-full" value="John Smith" />
         </div>
         <div
           class="col-span-1 flex flex-col items-start pl-4 border-l-2 border-dashed"
         >
-          <h4>Costumper PO No.</h4>
+          <h4 class="whitespace-nowrap">Costumper PO No.</h4>
           <InputSelect :listOption="listCostumerPO" class="w-full" />
         </div>
       </div>

@@ -1,6 +1,7 @@
 <template>
-  <button    type="button"
-
+  <button
+    @click="handlePlusChild"
+    type="button"
     class="bg-teal-400 text-white border rounded block p-4 ml-2 hover:bg-white hover:text-teal-400"
   >
     <svg
@@ -20,5 +21,13 @@
 <script>
   export default {
     name: 'ButtonPlus',
+    props: {
+      type: String,
+    },
+    methods: {
+      handlePlusChild() {
+        this.$emit('handle-plus');
+      },
+    },
   };
 </script>

@@ -23,10 +23,12 @@
     name: 'ButtonMin',
     props: {
       id: Number,
+      type: String,
     },
     methods: {
       handleMinusChild() {
-        this.$emit('handle-minus', this.id);
+        alert(`Button Minus ${this.id}`);
+        // this.$emit('handle-minus', this.id);
       },
     },
   };

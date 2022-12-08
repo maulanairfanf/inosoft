@@ -8,10 +8,10 @@
     <div class="col-span-4"></div>
     <div class="flex flex-col items-center">
       <div class="container-footer-text mb-1">
-        <span class="text-footer ml-4"> AED in Total</span>
+        <span class="text-footer ml-4 whitespace-nowrap"> AED in Total</span>
       </div>
       <div class="container-footer-text">
-        <span class="text-footer ml-4"> USD in Total</span>
+        <span class="text-footer ml-4 whitespace-nowrap"> USD in Total</span>
       </div>
     </div>
     <div class="flex flex-col items-center">
@@ -40,7 +40,7 @@
     </div>
     <div class="col-span-1"></div>
     <div class="flex items-center justify-end">
-      <ButtonPlus />
+      <ButtonPlus type="button" @handle-plus="handlePlus" />
     </div>
   </div>
 </template>
@@ -50,5 +50,10 @@
   export default {
     name: 'FooterGridCost',
     components: { InputText, ButtonPlus },
+    methods: {
+      handlePlus() {
+        alert('Click Button Plus');
+      },
+    },
   };
 </script>

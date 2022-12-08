@@ -3,9 +3,9 @@
     <InformationDetail class="mb-4" />
     <CostDetail />
     <div class="flex justify-end mt-4 bg-gray-50 py-6">
-      <ButtonCancel />
-      <ButtonSave />
-      <ButtonSubmit />
+      <ButtonCancel msg="Cancel" type="button" />
+      <ButtonSave msg="Saves as Draft" type="button" />
+      <ButtonSubmit msg="Submit" type="submit" />
     </div>
   </form>
 </template>
@@ -24,6 +24,11 @@
       ButtonSave,
       ButtonSubmit,
       InformationDetail,
+    },
+    methods: {
+      onSubmit() {
+        alert('Succes Submit');
+      },
     },
   };
 </script>

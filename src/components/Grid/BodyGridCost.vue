@@ -3,7 +3,7 @@
     <div class="col-span-2">
       <InputText type="text" placeholder="Description" width="w-full" />
     </div>
-    <div class="w-full">
+    <div>
       <InputText type="number" placeholder="QTY" width="w-full" />
     </div>
     <div>
@@ -42,7 +42,7 @@
     </div>
     <div class="col-span-2 flex justify-between">
       <InputSelect :listOption="listCharge" width="w-full mr-2" />
-      <ButtonMin @handle-minus="handleMinus" :id="id" />
+      <ButtonMin type="button" @handle-minus="handleMinus" :id="id" />
     </div>
   </div>
 </template>
@@ -72,7 +72,7 @@
     },
     methods: {
       handleMinus(params) {
-        console.log('id : ', params);
+        alert(`Click Button Minus With ID : ${params} `);
       },
     },
   };
