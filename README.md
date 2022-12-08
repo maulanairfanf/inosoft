@@ -1,5 +1,10 @@
 # inosoft
 
+# How To Run
+
+## Download and Run API
+you can download here (https://github.com/maulanairfanf/server-inosoft)
+
 ## Project setup
 ```
 npm install
@@ -15,5 +20,3 @@ npm run serve
 npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
