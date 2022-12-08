@@ -1,11 +1,11 @@
-# inosoft
+# Inosoft
 
-# How To Run
+## How To Run
 
-## Download and Run API
+### Download and Run API
 you can download here (https://github.com/maulanairfanf/server-inosoft)
 
-## Project setup
+### Project setup
 ```
 npm install
 ```
